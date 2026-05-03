@@ -1,0 +1,65 @@
+site_name: Tutoriel Linux & Bash
+site_description: Tutoriel Linux & Bash complet — 16 chapitres, 3 niveaux, 3 projets fil rouge
+site_author: Clifford Laserre
+docs_dir: docs
+
+theme:
+  name: material
+  language: fr
+  palette:
+    - scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Mode sombre
+    - scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Mode clair
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - admonition
+  - tables
+
+plugins:
+  - search:
+      lang: fr
+
+nav:
+  - Accueil: index.md
+  - "Niveau 1 — Fondamentaux":
+    - "Ch. 1 — Écosystème Linux": cours/01_ecosysteme.md
+    - "Ch. 2 — Navigation et filesystem": cours/02_navigation_filesystem.md
+    - "Ch. 3 — Manipulation de fichiers": cours/03_manipulation_fichiers.md
+    - "Ch. 4 — Permissions et ownership": cours/04_permissions_ownership.md
+    - "Ch. 5 — Flux, redirections, pipes": cours/05_flux_redirections.md
+    - "Ch. 6 — Recherche et filtrage": cours/06_recherche_filtrage.md
+  - "Niveau 2 — Traitement de texte":
+    - "Ch. 7 — sed, awk, cut, sort": cours/07_traitement_texte.md
+    - "Ch. 8 — Bash : variables et boucles": cours/08_bash_variables_conditions.md
+    - "Ch. 9 — Bash : fonctions et scripts": cours/09_bash_fonctions_scripts.md
+    - "Ch. 10 — Processus et jobs": cours/10_processus_jobs.md
+    - "Ch. 11 — Réseau": cours/11_reseau.md
+  - "Niveau 3 — Scripting avancé":
+    - "Ch. 12 — Regex avancées": cours/12_regex_avancees.md
+    - "Ch. 13 — Robustesse et erreurs": cours/13_robustesse_erreurs.md
+    - "Ch. 14 — Bash avancé": cours/14_bash_avance.md
+    - "Ch. 15 — Administration système": cours/15_administration_systeme.md
+    - "Ch. 16 — Automatisation et CI": cours/16_automatisation_ci.md
+  - Annexes:
+    - "A — Aide-mémoire commandes": annexes/A_aide_memoire.md
+    - "B — One-liners": annexes/B_one_liners.md
