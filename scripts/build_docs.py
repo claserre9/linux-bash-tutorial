@@ -13,11 +13,13 @@ def réécrire_liens(contenu: str, contexte: str) -> str:
     def remplacer(m: re.Match) -> str:
         lien = m.group(1)
 
-        ch = re.match(r"(?:\.\.\/|cours\/)(\d+_[^/]+)\/README\.md", lien)
+        ch = re.match(r"(?:\.\.\/|cours\/|\.\.\/cours\/)(\d+_[^/]+)\/README\.md", lien)
         if ch:
             nom = ch.group(1)
             if contexte == "cours":
                 return f"({nom}.md)"
+            elif contexte == "annexes":
+                return f"(../cours/{nom}.md)"
             else:
                 return f"(cours/{nom}.md)"
 
